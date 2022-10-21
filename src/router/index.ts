@@ -92,5 +92,21 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+// router.afterEach((to, from) => {
+//   setTimeout(() => {
+//     const before = document
+//       .querySelector(".ion-page");
+//     const main = document
+//       .querySelector(".ion-page.ion-page-hidden");
+
+//     if (main) {
+//       main.classList.remove("ion-page-hidden");
+//     }
+//     if (before) {
+//       before.classList.add("ion-page-hidden");
+//     }
+//   }, 100);
+// })
+
 
 export default router

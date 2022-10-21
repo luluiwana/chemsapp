@@ -49,7 +49,8 @@ export default defineComponent({
         const bgmusic = ref<HTMLAudioElement>();
         return {
             bgmusic,
-        }
+        };
+
 
     },
     data() {
@@ -116,6 +117,7 @@ export default defineComponent({
         },
     },
     mounted() {
+
         if (this.game_status == "true" || this.game_status == "quiz") {
             NativeAudio.isPlaying({
                 assetId: 'au_app'

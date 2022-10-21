@@ -9,9 +9,9 @@
                     <img src="@/theme/img/home.png" class="image-center w-100" alt="" srcset="">
                 </div>
                 <div class="text-center btn-menu">
-                    <ion-button @click="sound" router-link="/menu" router-direction="root" fill="clear"
-                        class="text-swing" style="transform: rotate(10deg);">
-                        <button class="btn">MENU</button>
+                    <ion-button router-link="/menu" router-direction="root" fill="clear" class="text-swing"
+                        style="transform: rotate(10deg);">
+                        <button @click="sound" class="btn">MENU</button>
                     </ion-button>
                 </div>
             </div>

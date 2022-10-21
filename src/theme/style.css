@@ -15,6 +15,7 @@ body{
     box-shadow:none !important;
     -webkit-box-shadow:none !important;
 }
+
 #app{
     padding: 0;
 }
