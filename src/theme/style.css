@@ -1,0 +1,100 @@
+@font-face {
+    font-family: FredokaOne;
+    src: url(@/theme/font/FredokaOne-Regular.ttf);
+  }
+  /* tag */
+body{
+    font-family: FredokaOne, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    background-size: contain;
+    font-size: 2rem;
+    background-image: url("../theme/img/Background.png");
+    /* height: auto; */
+}
+/* class */
+.no-shadow{
+    box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+}
+#app{
+    padding: 0;
+}
+.fixed{
+    width: 100vw !important;
+    height: auto!important;
+    top: 0px;
+}
+.header{
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 45px;
+    /* or 107% */
+
+    text-align: center;
+
+    color: #FECB00;
+
+    text-shadow: 7px 6px 10px rgb(0 0 0 / 50%);
+}
+.image-center{
+    display: block;
+    margin: auto;
+}
+
+.w-70{
+    width: 70% !important;
+}
+.w-100{
+    width: 100% !important;
+}
+.bounding-box{
+    width:100% !important;
+    height:600px !important;
+}
+.btn{
+    background-color: #FFD904;
+    border-radius: 40px;
+    color: black;
+    font-size: 20px;
+    padding: 5px 20px;
+    box-shadow: 7px 13px 26px 3px rgb(0 0 0 / 28%);
+    -webkit-box-shadow: 7px 13px 26px 3px rgb(0 0 0 / 28%);
+}
+.btn:active{
+    background-color: #ffb600;
+
+}
+.icon-sound{
+    width: 36px;
+    float: right;
+    margin: 10px;
+}
+.icon-back{
+    width: 43px;
+    margin: 10px;
+}
+.text-center{
+    text-align: center;
+}
+
+:root{
+    --ion-background-color:none;
+    font-family: 'FredokaOne';
+    --ion-font-family: 'FredokaOne'
+}
+#container {
+    padding-bottom: 4rem;
+}
+ion-button{
+    height: auto;
+}
+.menu-header{
+    width: 80%;
+}
+.material-design-icon {
+    color: #fef200;
+}
+.action-bar .page-num[data-v-369ccf30] {
+    margin-left: 0;
+    padding: 0px 10px;
+    color: white;
+}

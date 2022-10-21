@@ -1,0 +1,131 @@
+<template>
+    <ion-page>
+        <ion-content :fullscreen="true">
+            <div id="container">
+                <MobileHeader url="/menu">
+                </MobileHeader>
+                <div class="center">
+                    <img src="@/theme/img/header/video.png" class="menu-header">
+                </div>
+                <div class="video">
+                    <img @click="youtube('https://www.youtube.com/watch?v=7rLdu2N8Fzg')" src="@/theme/img/video/1.png">
+
+                    <img @click="youtube('https://www.youtube.com/watch?v=UefM6DhhZz8')" src="@/theme/img/video/2.png">
+                </div>
+                <div class="control">
+                    <ion-button @click="sound" router-link="/video2" router-direction="root" fill="clear" class="left">
+                        <img src="@/theme/img/previous.png" alt="" srcset="">
+                    </ion-button>
+                    <ion-button @click="sound" router-link="/video2" router-direction="root" fill="clear" class="right">
+                        <img src="@/theme/img/next.png" class="right" alt="" srcset="">
+                    </ion-button>
+
+                </div>
+
+                <MobileFooter>
+                </MobileFooter>
+
+            </div>
+        </ion-content>
+    </ion-page>
+</template>
+<script lang="ts">
+import { IonContent, IonPage, IonButton } from '@ionic/vue';
+import { defineComponent, ref } from 'vue';
+import MobileHeader from '@/components/AppHeader.vue';
+import MobileFooter from '@/components/AppFooter.vue';
+import click from '@/theme/audio/click.mp3';
+const sound_click = new Audio(click);
+
+
+
+export default defineComponent({
+    name: 'video-view',
+    components: {
+        IonContent,
+        IonPage,
+        MobileHeader,
+        MobileFooter,
+        IonButton
+    },
+    methods: {
+        youtube: function (link: string) {
+            location.href = link;
+        },
+
+        sound: function () {
+            sound_click.play();
+        },
+    }
+});
+</script>
+<style scoped>
+.right {
+    float: right;
+}
+
+.left {
+    float: left
+}
+
+.control {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+}
+
+ion-button img {
+    width: 40px
+}
+
+.video {
+    text-align: center;
+    margin-top: 4rem
+}
+
+.video img {
+    margin-top: -6rem;
+}
+
+#univ {
+    min-width: 90px;
+}
+
+.profil-bg {
+    background: #FFDE59;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 20px 0px;
+
+}
+
+.profil-bg img {
+    width: 60%;
+}
+
+.profil-bg table {
+    font-family: cursive;
+    font-size: 15px;
+    margin: 0px 16px;
+    text-align: left;
+    font-weight: 600;
+
+}
+
+td {
+    padding: 3px;
+    vertical-align: top;
+    word-break: break-word;
+}
+
+
+.center {
+    text-align: center;
+    margin-top: 2rem;
+}
+</style>
+    

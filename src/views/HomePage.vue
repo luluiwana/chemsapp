@@ -1,38 +1,52 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-    
       <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <div class="mobile text-center">
+          <img src="@/theme/img/splash1.png" class="text-swing image-center w-70" alt="" srcset="">
+        </div>
+
       </div>
+      <img src="@/theme/img/splash.png" class="fade-up image-center w-100 btm" style="translate: 0 100px" alt=""
+        srcset="">
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonPage } from '@ionic/vue';
 import { defineComponent } from 'vue';
-
+import anime from 'animejs';
 export default defineComponent({
   name: 'HomePage',
   components: {
     IonContent,
-    IonHeader,
     IonPage,
-    IonTitle,
-    IonToolbar
+  },
+  methods: {
+    translate: function () {
+      anime({
+        targets: '.text-swing',
+        rotate: -10,
+        loop: true,
+        easing: 'linear',
+        direction: 'alternate',
+      });
+    },
+    fadeup: function () {
+      anime({
+        targets: '.fade-up',
+        translateY: -100
+      });
+    },
+    redirect: function () {
+      setTimeout(() => this.$router.push({ path: '/landing' }), 3000);
+    }
+  },
+  mounted() {
+    this.translate();
+    this.fadeup();
+    this.redirect();
   }
 });
 </script>
@@ -40,12 +54,21 @@ export default defineComponent({
 <style scoped>
 #container {
   text-align: center;
-  
+
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+#background-content {
+  background: none;
+}
+
+.btm {
+  position: absolute;
+  bottom: 0;
 }
 
 #container strong {
@@ -56,9 +79,9 @@ export default defineComponent({
 #container p {
   font-size: 16px;
   line-height: 22px;
-  
+
   color: #8c8c8c;
-  
+
   margin: 0;
 }
 
