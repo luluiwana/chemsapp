@@ -2,13 +2,13 @@
     <div class="timer-class">
         <div class="timer">
             <span class="waktu">Waktu</span>
-            <span> {{timer}}</span>
+            <span> {{ timer }}</span>
 
 
         </div>
         <div class="score">
             <span class="waktu">Skor</span>
-            <span>{{score}}</span>
+            <span>{{ score }}</span>
             <!-- {{questions}} -->
         </div>
     </div>
@@ -16,14 +16,14 @@
     <div class="quiz-container">
         <img src="@/theme/img/quiz/owl.png">
         <div v-for="(item) in questions" :key="item" class="">
-            <div class="bg-blue" v-if="item.number==current">
+            <div class="bg-blue" v-if="item.number == current">
                 <div class="numQuestion">
-                    SOAL {{item.number}}
+                    SOAL {{ item.number }}
                 </div>
                 <div class="question" v-html="item.desc"></div>
 
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionA')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionA')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">A</button>
                         <div class="answer" v-html="item.optionA"></div>
@@ -35,7 +35,7 @@
 
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionB')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionB')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">B</button>
                         <div class="answer" v-html="item.optionB"></div>
@@ -47,7 +47,7 @@
                     </ion-button>
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionC')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionC')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">C</button>
                         <div class="answer" v-html="item.optionC"></div>
@@ -59,7 +59,7 @@
                     </ion-button>
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionD')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionD')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">D</button>
                         <div class="answer" v-html="item.optionD"></div>
@@ -71,7 +71,7 @@
                     </ion-button>
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionE')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionE')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">E</button>
                         <div class="answer" v-html="item.optionE"></div>
@@ -172,7 +172,7 @@ export default defineComponent({
                     trueOption: "optionE"
                 }, 6: {
                     number: 7,
-                    desc: "Perhatikan reaksi berikut: <br><br>NH<sub>4</sub><sup>+</sup> <i>(aq)</i> <sup>+</sup> H<sub>2</sub>O (l) → NH<sub>3</sub> <i>(aq)</i> <sup>+</sup> H<sub>3</sub>O<sup>+</sup> <i>(aq)</i><br><br>Yang merupakan pasangan asam basa konjugasi adalah...",
+                    desc: "Perhatikan reaksi berikut: <br><br>NH<sub>4</sub><sup>+</sup> <i>(aq)</i> + H<sub>2</sub>O (l) → NH<sub>3</sub> <i>(aq)</i> + H<sub>3</sub>O<sup>+</sup> <i>(aq)</i><br><br>Yang merupakan pasangan asam basa konjugasi adalah...",
                     optionA: "NH<sub>4</sub><sup>+</sup> dan H<sub>2</sub>O",
                     optionB: "NH<sub>4</sub><sup>+</sup> dan NH<sub>3</sub>",
                     optionC: "H<sub>2</sub>O dan NH<sub>3</sub>",

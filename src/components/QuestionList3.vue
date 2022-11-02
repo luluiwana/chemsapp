@@ -2,11 +2,11 @@
     <div class="timer-class">
         <div class="timer">
             <span class="waktu">Waktu</span>
-            <span> {{timer}}</span>
+            <span> {{ timer }}</span>
         </div>
         <div class="score">
             <span class="waktu">Skor</span>
-            <span>{{score}}</span>
+            <span>{{ score }}</span>
             <!-- {{questions}} -->
         </div>
     </div>
@@ -14,17 +14,17 @@
     <div class="quiz-container">
         <img src="@/theme/img/quiz/owl.png">
         <div v-for="(item) in questions" :key="item" class="">
-            <div class="bg-blue" v-if="item.number==current">
+            <div class="bg-blue" v-if="item.number == current">
                 <div class="numQuestion">
-                    SOAL {{item.number}}
+                    SOAL {{ item.number }}
                 </div>
                 <div class="question">
-                    <img v-if="item.number==2" src="@/theme/img/question/32.png" alt="" srcset="">
+                    <img v-if="item.number == 2" src="@/theme/img/question/32.png" alt="" srcset="">
                     <div v-html="item.desc"></div>
                 </div>
 
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionA')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionA')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">A</button>
                         <div class="answer" v-html="item.optionA"></div>
@@ -36,7 +36,7 @@
 
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionB')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionB')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">B</button>
                         <div class="answer" v-html="item.optionB"></div>
@@ -48,7 +48,7 @@
                     </ion-button>
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionC')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionC')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">C</button>
                         <div class="answer" v-html="item.optionC"></div>
@@ -60,7 +60,7 @@
                     </ion-button>
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionD')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionD')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">D</button>
                         <div class="answer" v-html="item.optionD"></div>
@@ -72,7 +72,7 @@
                     </ion-button>
                 </div>
                 <div class="option">
-                    <ion-button @click="check(item.trueOption,'optionE')" router-direction="root" fill="clear"
+                    <ion-button @click="check(item.trueOption, 'optionE')" router-direction="root" fill="clear"
                         class="btn-menu">
                         <button class="btn no-shadow">E</button>
                         <div class="answer" v-html="item.optionE"></div>
@@ -157,7 +157,7 @@ export default defineComponent({
                 },
                 4: {
                     number: 5,
-                    desc: "pH dari asam etanoat 0,02 M (Ka = 2 x 10<sup>-4</sup>) adalah...",
+                    desc: "pH dari asam etanoat 0,02 M <br/> (Ka = 2 x 10<sup>-4</sup>) adalah...",
                     optionA: "2-log 3,5",
                     optionB: "3,5-log 2",
                     optionC: "3,5-log 4",
@@ -177,7 +177,7 @@ export default defineComponent({
                 },
                 6: {
                     number: 7,
-                    desc: " Jika 90 cm<sup>3</sup> air ditambahkan ke dalam 10 cm<sup>3</sup> larutan HCl 01 M, pH larutan berubah dari...",
+                    desc: " Jika 90 cm<sup>3</sup> air ditambahkan ke dalam 10 cm<sup>3</sup> larutan HCl 0,1 M, pH larutan berubah dari...",
                     optionA: "1 menjadi 3",
                     optionB: "1 menjadi 2",
                     optionC: "1 menjadi 5",
