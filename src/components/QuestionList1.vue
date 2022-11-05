@@ -163,7 +163,7 @@ export default defineComponent({
                     trueOption: "optionA"
                 }, 5: {
                     number: 6,
-                    desc: "Perhatikan reaksi berikut:<br/><br/>HSO<sub>4</sub><sup>-</sup> <i>(aq)</i> + CO<sub>3</sub><sup>2-</sup> <i>(aq)</i>→ SO<sub>4</sub><sup>2-</sup><i>(aq)</i> + HCO<sup>3-</sup> <i>(aq)</i><br/><br/>Dari reaksi diatas yang termasuk basa konjugasi menurut teori asam basa Lewis adalah...",
+                    desc: "Perhatikan reaksi berikut:<br/><br/>HSO<sub>4</sub><sup>-</sup> <i>(aq)</i> + CO<sub>3</sub><sup>2-</sup> <i>(aq)</i>→ SO<sub>4</sub><sup>2-</sup><i>(aq)</i> + HCO<sup>3-</sup> <i>(aq)</i><br/><br/>Dari reaksi diatas yang termasuk basa konjugasi menurut teori asam basa Bronsted Lowry adalah...",
                     optionA: "Tidak ada",
                     optionB: "HCO<sup>3-</sup>",
                     optionC: "SO<sub>4</sub><sup>2-</sup>",
